@@ -156,3 +156,13 @@ footer {
   right: 0;
   left: initial;
 }
+
+/*media queries*/
+@media (min-width: 700px) {
+  :root {
+    --bg-url: url(./assets/bg-pc.jpg);
+  }
+  .light {
+    --bg-url: url(./assets/bg-pcl);
+  }
+}
