@@ -114,7 +114,7 @@ ul li a:hover {
 }
 
 #social-links a:hover {
-  background: var(--hightlight-color);
+  background: var(--highlight-color);
 }
 
 footer {
@@ -140,6 +140,7 @@ footer {
   left: 0;
   z-index: 1;
   transform: translateY(-50%);
+  animation: slide-back 0.2s;
 }
 
 #swich span {
@@ -154,8 +155,7 @@ footer {
 }
 
 .light #swich button {
-  right: 0;
-  left: initial;
+  animation: slide-in 0.4s forwards;
 }
 
 /*media queries*/
@@ -166,4 +166,26 @@ footer {
   .light {
     --bg-url: url(./assets/bg-pcl.jpg);
   }
+}
+
+@keyframes slide-in {
+  from {
+    left: 0;
+  }
+  to {
+    left: 50%;
+  }
+}
+
+@keyframes slide-back {
+  from{
+    left:50%
+  }
+  to{
+    left: 0;
+  }
+}
+
+#swich button:hover {
+  outline: 8px solid var(--highlight-color) ;
 }
